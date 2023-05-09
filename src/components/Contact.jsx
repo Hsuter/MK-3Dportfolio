@@ -4,6 +4,8 @@ import emailjs from "@emailjs/browser";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import { ErrorBoundary } from "react-error-boundary";
+import { earthFall } from "../assets";
 import ComputersCanvas from "./canvas/Earth";
 
 const Contact = () => {
@@ -125,7 +127,17 @@ const Contact = () => {
         variants={slideIn("right", "tween", 0.2, 1)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
       >
-        <ComputersCanvas />
+        <ErrorBoundary
+          fallback={
+            <img
+              src={earthFall}
+              alt="globe"
+              className="ml-28 md:w-[500px] w-[300px]"
+            />
+          }
+        >
+          <ComputersCanvas />
+        </ErrorBoundary>
       </motion.div>
     </div>
   );
