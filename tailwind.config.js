@@ -8,9 +8,15 @@ module.exports = {
         primary: "#050816",
         secondary: "#aaa6c3",
         tertiary: "#151030",
-        "black-100": "#100d25",
+        "black-100": "#000000",
         "black-200": "#090325",
         "white-100": "#f3f3f3",
+        "yellow-100": "#FFE500",
+        "dark-yellow": "#191900",
+      },
+      fontFamily: {
+        jost: "'Jost', sans-serif",
+        openSans: "'Open Sans', sans-serif",
       },
       boxShadow: {
         card: "0px 35px 120px -15px #211e35",

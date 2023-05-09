@@ -5,21 +5,19 @@ import {
 } from "react-vertical-timeline-component";
 import { motion } from "framer-motion";
 import "react-vertical-timeline-component/style.min.css";
-import { cv } from "../assets";
 
 import { styles } from "../styles";
 import { experiences } from "../constants";
-import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 
 const ExperienceCard = ({ experience }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: "#1d1836",
-        color: "#fff",
+        background: "#000000",
+        color: "#000000",
       }}
-      contentArrowStyle={{ borderRight: "7px solid  #232631" }}
+      contentArrowStyle={{ borderRight: "7px solid  #000000" }}
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
       icon={
@@ -35,7 +33,7 @@ const ExperienceCard = ({ experience }) => {
       <div>
         <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
         <p
-          className="text-secondary text-[16px] font-semibold"
+          className="text-yellow-100 text-[16px] font-semibold"
           style={{ margin: 0 }}
         >
           {experience.company_name}
@@ -57,24 +55,16 @@ const ExperienceCard = ({ experience }) => {
 };
 
 const Experience = () => {
-  const opencv = () => {
-    window.open(
-      "https://drive.google.com/file/d/11m_2KeI9ryESpYrweG3vhgtF9koX__9Y/view?usp=share_link"
-    );
-  };
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-center`}>
-          What I have done so far
-        </p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>
+        <h2 className={`${styles.sectionHeadText} text-black-100 ml-20 mt-20`}>
           Work Experience.
         </h2>
       </motion.div>
 
       <div className="mt-20 flex flex-col">
-        <VerticalTimeline>
+        <VerticalTimeline lineColor="#000000">
           {experiences.map((experience, index) => (
             <ExperienceCard
               key={`experience-${index}`}
@@ -83,22 +73,8 @@ const Experience = () => {
           ))}
         </VerticalTimeline>
       </div>
-      <div className="flex flex-col justify-center text-center mt-10 align ">
-        <img
-          src={cv}
-          alt="cv"
-          onClick={opencv}
-          className="w-20 h-20 object-contain mx-auto"
-        />
-        <button
-          className={`font-bold text-white bg-[#1d1836] w-25 mx-auto rounded-md p-2 cursor-pointer border-b-2 border-white-100 `}
-          onClick={opencv}
-        >
-          View my Resume
-        </button>
-      </div>
     </>
   );
 };
 
-export default SectionWrapper(Experience, "work");
+export default Experience;

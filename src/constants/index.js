@@ -1,30 +1,20 @@
 import {
-  mobile,
-  backend,
-  creator,
-  web,
-  javascript,
-  typescript,
-  html,
-  css,
-  reactjs,
-  redux,
-  tailwind,
-  nodejs,
-  mongodb,
-  git,
-  figma,
+  terra,
+  aws,
   docker,
-  threejs,
-  naxy,
-  knbs,
-  ksco,
-  naxy1,
-  naxy2,
-  doba1,
+  oracle,
+  ffast,
+  kpower,
+  oaknet,
+  oaknetProject,
+  cruddApp,
 } from "../assets";
 
 export const navLinks = [
+  {
+    id: "home",
+    title: "Home",
+  },
   {
     id: "about",
     title: "About",
@@ -39,217 +29,133 @@ export const navLinks = [
   },
 ];
 
-const services = [
-  {
-    title: "Web Developer",
-    icon: web,
-  },
-  {
-    title: "Graphic Designer",
-    icon: mobile,
-  },
-  {
-    title: "Product Desinger",
-    icon: backend,
-  },
-  {
-    title: "Content Creator",
-    icon: creator,
-  },
-];
-
 const technologies = [
   {
-    name: "HTML 5",
-    icon: html,
+    name: "TERA",
+    icon: terra,
   },
   {
-    name: "CSS 3",
-    icon: css,
+    name: "AWS",
+    icon: aws,
   },
   {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
+    name: "DOCKER",
     icon: docker,
+  },
+
+  {
+    name: "ORACLE",
+    icon: oracle,
   },
 ];
 
 const experiences = [
   {
-    title: "Software Developer",
-    company_name: "Naxy Brands",
-    icon: naxy,
+    title: "Cloud/DevOps Engineer",
+    company_name: "FutureFast Global Tech Solutions",
+    icon: ffast,
     iconBg: "#E6DEDD",
-    date: "May 2022 - Present",
+    date: "April 2023 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Implementing cost monitoring and alerts that helped identify cost spikes and take action to address them quickly.",
+      " This helped reduce monthly costs by almost 25% and prevent unexpected costs and ensure that the company stays within budget.",
     ],
   },
   {
-    title: "System Administrator",
-    company_name: "Kenya seed company",
-    icon: ksco,
+    title: "DevOps Engineering Intern",
+    company_name: "Oaknet Business",
+    icon: kpower,
     iconBg: "#E6DEDD",
-    date: "May 2021 - May 2022",
+    date: "Jan 2023 - March 2023",
     points: [
-      "Ensuring that all hardware, software, and system requirements are met.",
-      "Updating and maintaining the company website and softwares.",
-      "Administering the 2019 national census.",
-      "Reporting to the Head of IT department.",
+      "Responsible for deploying and maintaining an Intern Management System fully hosted on AWS.",
+      "Gained experience of good DevOps such as containerization, CI/CD pipelines, IaC,configuration management, monitoring, logging and observability",
     ],
   },
   {
-    title: "Tech support",
-    company_name: "Kenya National Bureau of Statistics",
-    icon: knbs,
+    title: "Telecommunication Engineering Intern",
+    company_name: "Kenya Power & Lighting Co.",
+    icon: oaknet,
     iconBg: "#E6DEDD",
-    date: "Jan 2019 - Sep 2019",
+    date: "Jan 2022 - April 2022",
     points: [
-      "Ensuring that all hardware, software, and system requirements are met.",
-      "Updating and maintaining the company website and softwares.",
-      "Administering the 2019 national census.",
-      "Reporting to the Head of IT department.",
+      "Configuring routers and IP phones.",
+      "ODTR tests on fiber optic cables and LAN test on Ethernet cables.",
+      "Fusion splicing of fiber optic cables and end-to-end termination on the Optical Distribution Frame.",
     ],
-  },
-];
-
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Suter proved me wrong.",
-    name: "Dennis Muthomi",
-    designation: "CEO",
-    company: "Naxy brands",
-    image: "",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Suter does.",
-    name: "Joshua Nyabok",
-    designation: "Producer",
-    company: "Fortune Records",
-    image: "",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Clinton Kibui",
-    designation: "Marketing manager",
-    company: "Naxy brands",
-    image: "",
   },
 ];
 
 const projects = [
   {
-    name: "Naxy Ecomm ",
+    company: "AWS Ontario Virtual User Group ",
+    name: "Cruddur",
     description:
-      "Web-based platform that allows users to view,search , and purchase produsts from the Naxy brands like Tshirts,Csaps and other products. ",
+      "Built a cloud-native web application(Cruddur) that combines multiple cloud services to emulate a real-world production workload. I was able to work with multiple serverless containers, abstract API call with GraphQL, data modeling for DynamoDB, basic data modeling for Amazon RDS, offload background jobs to serverless functions, setup hosted zones using Route53 ",
+    image: cruddApp,
     tags: [
       {
-        name: "react",
+        name: "docker",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "ecs",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "fargate",
         color: "pink-text-gradient",
       },
     ],
-    image: naxy2,
-    source_code_link:
-      "https://github.com/Hsuter/EcommerceSIte-reactJs-and-nodeJs-",
-    website_link: "https://naxybrands.vercel.app/",
+    source_code_link: "",
+    website_link: "",
   },
   {
-    name: "Doba",
+    company: "Oaknet IMS",
+    name: "Intern Management System",
     description:
-      "This is a website that allows users to stream music and videos from the internet from all over the globe powered by shazam API. ",
+      "Developed an intern-management-system for Oaknet Business. I was responsible for deploying the application on a cloud-native web server hosted on AWS. Taking advantage of several cloud-based services such as Route53, ALB, AmazonRDS, EFS",
+    image: oaknetProject,
     tags: [
       {
-        name: "react",
+        name: "hybrid",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "route53",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "zabbix",
         color: "pink-text-gradient",
       },
     ],
-    image: doba1,
-    source_code_link: "https://github.com/Hsuter/doba",
-    website_link: "https://doba.vercel.app/",
-  },
-  {
-    name: "Naxy 1.0",
-    description:
-      "Web-based platform that allows users to view,search , and purchase produsts from the Naxy brands like Tshirts,Csaps and other products.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: naxy1,
-    source_code_link:
-      "https://github.com/Hsuter/naxybrands_ecommerce_sanity_stripe",
+    source_code_link: "",
+    website_link: "",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+const achievements = [
+  {
+    name: "Cisco CCNA 200-301",
+
+    organization: "Institute of Advanced Technology",
+  },
+  {
+    name: "AWS Cloud Practitioner",
+
+    organization: "AWS",
+  },
+  {
+    name: "Oracle Cloud Infrastracture Architect Associate",
+
+    organization: "Oracle",
+  },
+  {
+    name: "Oracle Cloud Infrastructure Associate Foundations",
+
+    organization: "Oracle",
+  },
+];
+
+export { technologies, experiences, projects, achievements };

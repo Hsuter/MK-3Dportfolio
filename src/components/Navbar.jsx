@@ -29,7 +29,7 @@ const Navbar = () => {
     <nav
       className={`${
         styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-20 ${
+      } w-full flex items-center py-5 fixed top-0 z-[999] nav ${
         scrolled ? "bg-primary" : "bg-transparent"
       }`}
     >
@@ -43,9 +43,6 @@ const Navbar = () => {
           }}
         >
           <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
-          <p className="text-white text-[18px] font-bold cursor-pointer flex ">
-            Suter &nbsp;
-          </p>
         </Link>
 
         <ul className="list-none hidden sm:flex flex-row gap-10">
@@ -53,8 +50,8 @@ const Navbar = () => {
             <li
               key={nav.id}
               className={`${
-                active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
+                active === nav.title ? "text-white" : "text-white"
+              } hover:text-yellow-100 text-[18px] font-medium cursor-pointer font-jost`}
               onClick={() => setActive(nav.title)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
@@ -79,8 +76,8 @@ const Navbar = () => {
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-secondary"
+                  className={`font-jost font-medium cursor-pointer text-[16px] ${
+                    active === nav.title ? "text-white" : "text-white"
                   }`}
                   onClick={() => {
                     setToggle(!toggle);

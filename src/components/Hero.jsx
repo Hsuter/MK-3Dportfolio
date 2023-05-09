@@ -1,62 +1,47 @@
-import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
-import { hero1bg } from "../assets";
+import Typewriter from "typewriter-effect";
 
 const Hero = () => {
-  const [phoneScreen, setPhoneScreen] = useState(false);
-
-  useEffect(() => {
-    if (window.innerWidth < 768) {
-      setPhoneScreen(true);
-    } else {
-      setPhoneScreen(false);
-    }
-  }, []);
   return (
-    <section className={`relative w-full h-screen mx-auto flex justify-center`}>
-      <div
-        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
-      >
-        <div className="flex flex-col justify-center items-center mt-5">
-          <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
-          <div className="w-1 sm:h-80 h-40 violet-gradient" />
-        </div>
-
-        <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className="text-[#915EFF]">Suter</span>
+    <section
+      className={`relative w-full h-screen mx-auto flex justify-center items-center `}
+      id="home"
+    >
+      <div className={` ${styles.paddingX} items-center justify-center`}>
+        <div className=" flex flex-col items-center justify-center  gap-20">
+          <h1
+            className={`${styles.heroHeadText}  font-medium  text-yellow-100`}
+          >
+            MARK KIBARA
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I'm a software developer and designer
-            <br className="sm:block hidden" />
-            with a creative edge and zeal in entrepreneurship.
-          </p>
-        </div>
-      </div>
-      {phoneScreen ? (
-        <img src={hero1bg} alt="bg" className="mt-60 h-96" />
-      ) : (
-        <ComputersCanvas />
-      )}
-
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
-        <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
-            <motion.div
-              animate={{
-                y: [0, 24, 0],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
-              className="w-3 h-3 rounded-full bg-secondary mb-1"
-            />
+          <div
+            className={`${styles.heroSubText}  mt-2 text-white-100 flex flex-row gap-2`}
+          >
+            I'm a
+            <span className="text-yellow-100">
+              <Typewriter
+                options={{
+                  autoStart: true,
+                  loop: true,
+                }}
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString("DevOps Engineer")
+                    .deleteAll()
+                    .typeString("Cloud Engineer")
+                    .deleteChars(8)
+                    .typeString("Architect")
+                    .deleteAll()
+                    .start();
+                }}
+              />
+            </span>
           </div>
-        </a>
+          <button className="bg-yellow-100 rounded-full text-black py-5 px-16">
+            <a href="#about">ABOUT ME</a>
+          </button>
+        </div>
       </div>
     </section>
   );

@@ -6,7 +6,6 @@ import {
   Experience,
   Tech,
   Navbar,
-  Feedbacks,
   Hero,
   Contact,
   Works,
@@ -17,9 +16,10 @@ import {
 function App() {
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-primary">
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-          <Navbar />
+      <div className="w-[100vw] ">
+        <Navbar className="" />
+        <div className="relative z-0 bg-primary bg-cover bg-no-repeat bg-center ">
+          <StarsCanvas />
           <Hero />
         </div>
         <div>
@@ -27,9 +27,8 @@ function App() {
           <Experience />
           <Tech />
           <Works />
-          <Feedbacks />
         </div>
-        <div className="relative z-0">
+        <div className="relative z-0 bg-black-100">
           <Contact />
           <StarsCanvas />
           <Footer />
